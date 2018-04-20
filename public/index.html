@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Study</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/Jstyles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script src="javascripts/main.js"></script>
+
+<!------------------------------------------------------------------------------------->
+</head>
+<body class="bodyLimits">
+	
+	<h3 class="center intro" >Introduction to the Study</h3>
+	<p class="center intro" >Lorem ipsum dolor sit amet, id quod consulatu vis, vel quot facer nullam ex, an mei scaevola referrentur. Bonorum adipisci facilisis vis ei, ne vis possim vituperata. Id dicunt indoctum deseruisse mel, at definiebas honestatis referrentur eum, numquam feugiat sit te. Cu purto soluta insolens vel, sea et nostro perfecto, at modo fastidii duo. Per ludus quidam eu, ius causae prodesset quaerendum no, no modo offendit democritum vis.
+
+	Usu no congue sapientem sententiae, est quidam pertinax instructior ut. Duo alterum denique te. Sit id meis iuvaret oporteat, modus mundi lobortis at nam. Et dicit integre similique his, ex ubique vidisse definitiones qui. Eos ut legere posidonium, menandri conclusionemque ex vix.
+
+	Enim natum facer id vis, mea ut hendrerit reformidans ullamcorper, eos ea animal pericula. Pro id exerci sensibus omittantur, corpora dissentias no quo. Qui id persius persecuti, everti nostrud nostrum te nec, case discere consetetur at mea. His tempor eruditi at, quo id suas fabellas, nam ne regione saperet. Cu quaeque ponderum his, vis iudicabit adversarium cu. No facilis menandri mel. No exerci scribentur duo, mundi elitr saepe ad eos.
+
+	Ex hendrerit scripserit repudiandae sit, sit regione accommodare in, hendrerit reformidans mea no. Ex sumo wisi vel, hinc nullam mea id. Euismod nusquam iudicabit qui id. Officiis corrumpit pri eu. Est ne vocent officiis, malorum dolorum vivendo te sea, porro epicuri accusamus et eam.
+
+	Eripuit adversarium neglegentur ad usu. Te nam veniam singulis recteque, in his mazim tantas. Quo impetus aeterno disputando id, ei vim choro feugait necessitatibus. Impetus corrumpit at qui.
+	</p>
+
+	<div class="center ">
+		<button class="center button" id="startEx" onclick="beginTest()">Start an experement</button>
+	</div>
+
+	<div class="center hidden" id="userReady" >
+		<img class="pic" src="images/placeholder.png">
+			</br>
+		<button class="center button" id="readyBtn" onclick="readyForNext()">Click when ready</button>
+	</div>
+
+	<div class="center hidden" id="placeholder" >
+		<img class="pic" src="images/placeholder.png">
+	</div>
+<!------------------------------------------------------------------------------------->
+		<div class="center hidden" id="1pic" >
+			<img class="pic" src="images/1pic.png">
+		</div>
+
+		<div class="center hidden" id="1picChange" >
+			<img class="pic" src="images/1picChange.png">
+			</br>	
+			<p class="center" >Are they differ?</>
+			<div class="center">
+				<form method="get">
+					<input type="button" class="button" value="Yes" data-user-response="yes,1" onclick="savePositive(1)">
+					<input type="button" class="button" value="No" data-user-response="no,1" onclick="saveNegative(1)">
+				</form>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------->
+		<div class="center hidden" id="2pic" >
+			<img class="pic" src="images/2pic.png">
+		</div>
+
+		<div class="center hidden" id="2picChange" >
+			<img class="pic" src="images/2picChange.png">
+			</br>	
+			<p class="center" >Are they differ?</>
+			<div class="center">
+				<form method="get">
+					<input type="button" class="button" value="Yes" onclick="savePositive(2)">
+					<input type="button" class="button" value="No" onclick="saveNegative(2)">
+				</form>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------->
+		<div class="center hidden" id="3pic" >
+			<img class="pic" src="images/3pic.png">
+		</div>
+
+		<div class="center hidden" id="3picChange" >
+			<img class="pic" src="images/3picChange.png">
+			</br>	
+			<p class="center" >Are they differ?</>
+			<div class="center">
+				<form method="get">
+					<input type="button" class="button" value="Yes" onclick="savePositive(3)">
+					<input type="button" class="button" value="No" onclick="saveNegative(3)">
+				</form>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------->
+		<div class="center hidden" id="4pic" >
+			<img class="pic" src="images/4pic.png">
+		</div>
+
+		<div class="center hidden" id="4picChange" >
+			<img class="pic" src="images/4picChange.png">
+			</br>	
+			<p class="center" >Are they differ?</>
+			<div class="center">
+				<form method="get">
+					<input type="button" class="button" value="Yes" onclick="savePositive(4)">
+					<input type="button" class="button" value="No" onclick="saveNegative(4)">
+				</form>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------->
+<div class="center hidden" id="doneMsg" >
+	<h3>We are done for now</h3>
+</div>
+
+
+</body>
+
+</html>

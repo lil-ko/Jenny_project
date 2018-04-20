@@ -1,0 +1,41 @@
+/*Width of the whole site*/
+.bodyLimits {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+	background-color: #feffc4;
+}
+
+.center {
+	text-align: center;
+}
+
+.button {
+	font-size: 16px;
+	border-radius: 8px;
+	background-color: white; 
+	color: black;
+	border: 2px solid white;
+	margin: 10px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+	box-shadow: none;
+}
+
+div.hidden
+{
+   display: none
+}
+
+.pic
+{
+	height: 400px;
+    width: auto;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
