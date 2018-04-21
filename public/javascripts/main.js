@@ -8,15 +8,14 @@ function savePositive(picNum){
 	console.log(userResult);
 	index--;
 	
-	$(document).ready(function(){
-    $.post("http://localhost:8000/",
-		{
-			picNum: picNum,
-			userReaction: "Yes"
-		});
-	});
-	
 	if (index >= 0) {
+		$(document).ready(function(){
+			$.post("http://localhost:8000/",
+			{
+				picNum: picNum,
+				userReaction: "Yes"
+			});
+		});
 		$(document).ready(function(){
 			$("div#" + picNum + "picChange").addClass("hidden");
 			$("div#userReady").removeClass("hidden");
@@ -31,6 +30,13 @@ function saveNegative(picNum){
 	console.log(userResult);
 	index--;
 	if (index >= 0) {
+		$(document).ready(function(){
+			$.post("http://localhost:8000/",
+			{
+				picNum: picNum,
+				userReaction: "No"
+			});
+		});
 		$(document).ready(function(){
 			$("div#" + picNum + "picChange").addClass("hidden");
 			$("div#userReady").removeClass("hidden");
