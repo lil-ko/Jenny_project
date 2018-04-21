@@ -9,13 +9,7 @@ function savePositive(picNum){
 	index--;
 	
 	if (index >= 0) {
-		$(document).ready(function(){
-			$.post("http://localhost:8000/",
-			{
-				picNum: picNum,
-				userReaction: "Yes"
-			});
-		});
+
 		$(document).ready(function(){
 			$("div#" + picNum + "picChange").addClass("hidden");
 			$("div#userReady").removeClass("hidden");
@@ -30,13 +24,7 @@ function saveNegative(picNum){
 	console.log(userResult);
 	index--;
 	if (index >= 0) {
-		$(document).ready(function(){
-			$.post("http://localhost:8000/",
-			{
-				picNum: picNum,
-				userReaction: "No"
-			});
-		});
+
 		$(document).ready(function(){
 			$("div#" + picNum + "picChange").addClass("hidden");
 			$("div#userReady").removeClass("hidden");
@@ -88,9 +76,19 @@ function endOfTest(){
 	    $("div#doneMsg").removeClass("hidden");
 		$("div#" + picNumber + "picChange").addClass("hidden");
 	});
-	//send results to csv
-	console.log("index became " + index + " and we're done here");
-	addToResultsFile();
+	var userResStr = new String();
+	var i;
+	for (i=0; i<4; i++){
+		userResStr = userResStr + userResult[i] + ",";
+	}
+	$(document).ready(function(){
+			$.post("http://localhost:8000/",
+			{
+				userResStr: userResStr
+			});
+		});
+	console.log("index became " + index);
+	console.log("and we're passing to server: " + userResult);
 }
 
 

@@ -23,11 +23,11 @@ app.use('/favicon.ico', express.static('images/favicon.ico'))
 
 app.use('/', indexRouter);
 
+// receiving string with user results from client
 app.post('/', function(req, res) {
-	//req.body.picNum
-	//req.body.
-	userResultArray[req.body.picNum-1] = (req.body.userReaction);	
-	res.status(200).send(userResultArray[req.body.picNum-1]);
+	// Calling for "add Result to csv" function
+	addToResultsFile(req.body.userResStr);
+	res.status(200).send(req.body.userResStr);
 });
 
 // catch 404 and forward to error handler
@@ -64,4 +64,17 @@ function onRequest(request, response){
 		}
 		response.end();
 	});
+}
+
+//Adding Result to csv file
+function addToResultsFile(userResStr){
+	userResStr = userResStr.concat("\r\n");
+	console.log("Im in addToResultsFile. userResStr is " + userResStr);
+	
+	fs.appendFile('Results.csv', userResStr, function (err) {
+	  if (err) throw err;
+	  console.log('Saved!');
+	});
+	
+
 }
